@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
@@ -28,17 +27,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--cr);color:var(--ink);min-
 /* ══ FIREBASE CONFIG BANNER ══ */
 .config-banner{background:#FFF3CD;border-bottom:2px solid #FFC107;padding:12px 20px;display:flex;align-items:center;gap:10px;font-size:13px;color:#856404}
 .config-banner strong{font-weight:700}
-.config-banner a{color:var(–b);text-decoration:underline;cursor:pointer}
+.config-banner a{color:var(--b);text-decoration:underline;cursor:pointer}
 .config-banner.hidden{display:none}
 
 /* ══ TOPBAR ══ */
-.top{background:var(–dk);height:54px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 20px rgba(0,0,0,.35)}
-.logo{font-family:‘DM Serif Display’,serif;font-size:17px;color:var(–pl);display:flex;align-items:center;gap:8px;flex-shrink:0}
-.logo em{color:var(–lt);font-style:italic}
+.top{background:var(--dk);height:54px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 20px rgba(0,0,0,.35)}
+.logo{font-family:'DM Serif Display',serif;font-size:17px;color:var(--pl);display:flex;align-items:center;gap:8px;flex-shrink:0}
+.logo em{color:var(--lt);font-style:italic}
 .top-acts{display:flex;gap:6px;align-items:center}
-.tbtn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:var(–pl);border-radius:var(–rads);padding:6px 12px;cursor:pointer;font-family:‘DM Sans’,sans-serif;font-size:12px;font-weight:500;display:flex;align-items:center;gap:5px;transition:var(–tr);white-space:nowrap}
+.tbtn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:var(--pl);border-radius:var(--rads);padding:6px 12px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;display:flex;align-items:center;gap:5px;transition:var(--tr);white-space:nowrap}
 .tbtn:hover{background:rgba(255,255,255,.18)}
-.tbtn.accent{background:var(–lt);border-color:var(–lt);color:var(–dk);font-weight:600}
+.tbtn.accent{background:var(--lt);border-color:var(--lt);color:var(--dk);font-weight:600}
 .tbtn.accent:hover{background:#d4aa7a}
 .sync-dot{width:7px;height:7px;border-radius:50%;background:#4CAF50;display:inline-block;margin-right:2px}
 .sync-dot.off{background:#f44336}
@@ -51,136 +50,136 @@ body{font-family:'DM Sans',sans-serif;background:var(--cr);color:var(--ink);min-
 @keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 
 /* ══ LIST VIEW ══ */
-.lhdr{background:linear-gradient(135deg,var(–dk) 0%,var(–md) 100%);padding:22px 20px 18px;color:var(–pl)}
-.lhdr h1{font-family:‘DM Serif Display’,serif;font-size:26px;font-weight:400;margin-bottom:3px}
-.lhdr p{color:var(–lt);font-size:12px}
+.lhdr{background:linear-gradient(135deg,var(--dk) 0%,var(--md) 100%);padding:22px 20px 18px;color:var(--pl)}
+.lhdr h1{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;margin-bottom:3px}
+.lhdr p{color:var(--lt);font-size:12px}
 
-.ltool{padding:12px 16px;background:var(–pl);border-bottom:1px solid #E8D8C8;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.search{display:flex;align-items:center;gap:7px;background:var(–wh);border:1.5px solid #DDD0C0;border-radius:var(–rads);padding:8px 12px;flex:1;min-width:160px;max-width:300px}
-.search input{border:none;outline:none;font-family:‘DM Sans’,sans-serif;font-size:13px;color:var(–ink);background:none;width:100%}
-.search input::placeholder{color:var(–mute)}
-.btn{border:none;cursor:pointer;font-family:‘DM Sans’,sans-serif;font-weight:600;border-radius:var(–rads);display:flex;align-items:center;gap:6px;transition:var(–tr);white-space:nowrap}
-.btn-pri{background:var(–dk);color:var(–pl);padding:9px 18px;font-size:13px}
-.btn-pri:hover{background:var(–md)}
+.ltool{padding:12px 16px;background:var(--pl);border-bottom:1px solid #E8D8C8;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.search{display:flex;align-items:center;gap:7px;background:var(--wh);border:1.5px solid #DDD0C0;border-radius:var(--rads);padding:8px 12px;flex:1;min-width:160px;max-width:300px}
+.search input{border:none;outline:none;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);background:none;width:100%}
+.search input::placeholder{color:var(--mute)}
+.btn{border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;border-radius:var(--rads);display:flex;align-items:center;gap:6px;transition:var(--tr);white-space:nowrap}
+.btn-pri{background:var(--dk);color:var(--pl);padding:9px 18px;font-size:13px}
+.btn-pri:hover{background:var(--md)}
 .btn-pri:active{transform:scale(.97)}
 
 /* Filter tabs */
 .ftabs{display:flex;gap:6px;padding:12px 16px 6px;overflow-x:auto;scrollbar-width:none}
 .ftabs::-webkit-scrollbar{display:none}
-.ftab{background:var(–wh);border:1.5px solid #E0D4C8;border-radius:20px;padding:5px 13px;font-size:11px;font-weight:600;cursor:pointer;transition:var(–tr);color:var(–soft);flex-shrink:0;white-space:nowrap}
-.ftab.on{background:var(–dk);border-color:var(–dk);color:var(–pl)}
+.ftab{background:var(--wh);border:1.5px solid #E0D4C8;border-radius:20px;padding:5px 13px;font-size:11px;font-weight:600;cursor:pointer;transition:var(--tr);color:var(--soft);flex-shrink:0;white-space:nowrap}
+.ftab.on{background:var(--dk);border-color:var(--dk);color:var(--pl)}
 
 /* ── DESKTOP TABLE ── */
 .twrap{padding:10px 16px 80px}
-.tbl{width:100%;border-collapse:separate;border-spacing:0;background:var(–wh);border-radius:var(–rad);box-shadow:var(–sh);overflow:hidden}
-.tbl thead th{background:var(–dk);color:var(–pl);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:11px 13px;text-align:left;white-space:nowrap}
-.tbl tbody tr{border-bottom:1px solid #F2EAE0;transition:var(–tr);cursor:pointer}
-.tbl tbody tr:hover{background:var(–pl)}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;background:var(--wh);border-radius:var(--rad);box-shadow:var(--sh);overflow:hidden}
+.tbl thead th{background:var(--dk);color:var(--pl);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:11px 13px;text-align:left;white-space:nowrap}
+.tbl tbody tr{border-bottom:1px solid #F2EAE0;transition:var(--tr);cursor:pointer}
+.tbl tbody tr:hover{background:var(--pl)}
 .tbl tbody tr:last-child{border-bottom:none}
 .tbl td{padding:11px 13px;vertical-align:middle}
-.td-link{color:var(–b);font-weight:600}
-.td-nr{font-weight:700;color:var(–mute);font-size:12px}
+.td-link{color:var(--b);font-weight:600}
+.td-nr{font-weight:700;color:var(--mute);font-size:12px}
 .td-money{font-weight:600;font-variant-numeric:tabular-nums;text-align:right;font-size:13px}
-.td-pos{color:var(–g)}.td-neg{color:var(–r)}.td-neu{color:var(–mute)}
-.td-warn{color:var(–o);font-weight:700}
+.td-pos{color:var(--g)}.td-neg{color:var(--r)}.td-neu{color:var(--mute)}
+.td-warn{color:var(--o);font-weight:700}
 
 /* ── MOBILE CARDS ── */
 .mcards{padding:8px 12px 80px;display:none;flex-direction:column;gap:10px}
-.mcard{background:var(–wh);border-radius:var(–rad);box-shadow:var(–sh);padding:14px 16px;cursor:pointer;transition:var(–tr);border-left:4px solid var(–lt);active-color:var(–pl)}
-.mcard:active{transform:scale(.99);background:var(–pl)}
+.mcard{background:var(--wh);border-radius:var(--rad);box-shadow:var(--sh);padding:14px 16px;cursor:pointer;transition:var(--tr);border-left:4px solid var(--lt);active-color:var(--pl)}
+.mcard:active{transform:scale(.99);background:var(--pl)}
 .mcard-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px}
-.mcard-name{font-weight:700;font-size:15px;color:var(–b)}
-.mcard-nr{font-size:11px;color:var(–mute);font-weight:600;margin-top:2px}
-.mcard-addr{font-size:12px;color:var(–soft);margin-bottom:10px}
+.mcard-name{font-weight:700;font-size:15px;color:var(--b)}
+.mcard-nr{font-size:11px;color:var(--mute);font-weight:600;margin-top:2px}
+.mcard-addr{font-size:12px;color:var(--soft);margin-bottom:10px}
 .mcard-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-top:1px solid #F5EDE0}
-.mcard-lbl{font-size:11px;color:var(–mute);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.mcard-lbl{font-size:11px;color:var(--mute);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
 .mcard-val{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
 
-.empty{text-align:center;padding:48px 20px;color:var(–mute)}
+.empty{text-align:center;padding:48px 20px;color:var(--mute)}
 .empty-ico{font-size:36px;margin-bottom:12px}
-.empty p{font-size:15px;margin-bottom:6px;color:var(–soft)}
+.empty p{font-size:15px;margin-bottom:6px;color:var(--soft)}
 .empty small{font-size:12px}
 
 /* Status badges */
 .badge{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap}
 .s-wycena{background:#F3F4F6;color:#374151}
 .s-pomiar{background:#FFF9C4;color:#854D0E}
-.s-projekt{background:var(–bb);color:var(–b)}
-.s-zamowienie{background:var(–ob);color:var(–o)}
-.s-montaz{background:var(–pb);color:var(–p)}
-.s-poprawki{background:var(–rb);color:var(–r)}
-.s-zakonczone{background:var(–gb);color:var(–g)}
+.s-projekt{background:var(--bb);color:var(--b)}
+.s-zamowienie{background:var(--ob);color:var(--o)}
+.s-montaz{background:var(--pb);color:var(--p)}
+.s-poprawki{background:var(--rb);color:var(--r)}
+.s-zakonczone{background:var(--gb);color:var(--g)}
 
 /* ══ FORM VIEW ══ */
-.fhdr{background:linear-gradient(135deg,var(–dk),var(–md));padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.fhdr{background:linear-gradient(135deg,var(--dk),var(--md));padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .fhdr-l{display:flex;align-items:center;gap:10px}
-.back-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:var(–pl);border-radius:var(–rads);padding:8px 14px;cursor:pointer;font-family:‘DM Sans’,sans-serif;font-size:13px;display:flex;align-items:center;gap:5px;transition:var(–tr)}
+.back-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:var(--pl);border-radius:var(--rads);padding:8px 14px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;display:flex;align-items:center;gap:5px;transition:var(--tr)}
 .back-btn:hover{background:rgba(255,255,255,.2)}
-.fhdr h2{font-family:‘DM Serif Display’,serif;font-size:19px;color:var(–pl);font-weight:400}
+.fhdr h2{font-family:'DM Serif Display',serif;font-size:19px;color:var(--pl);font-weight:400}
 .fhdr-r{display:flex;gap:8px;flex-wrap:wrap}
-.btn-save{background:var(–g);color:var(–wh);border:none;border-radius:var(–rads);padding:9px 20px;cursor:pointer;font-family:‘DM Sans’,sans-serif;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;transition:var(–tr)}
+.btn-save{background:var(--g);color:var(--wh);border:none;border-radius:var(--rads);padding:9px 20px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px;transition:var(--tr)}
 .btn-save:hover{background:#165a30}
 .btn-save:active{transform:scale(.97)}
-.btn-del{background:rgba(185,28,28,.15);color:#ff6b6b;border:1px solid rgba(185,28,28,.3);border-radius:var(–rads);padding:9px 14px;cursor:pointer;font-family:‘DM Sans’,sans-serif;font-size:12px;font-weight:500;display:flex;align-items:center;gap:5px;transition:var(–tr)}
+.btn-del{background:rgba(185,28,28,.15);color:#ff6b6b;border:1px solid rgba(185,28,28,.3);border-radius:var(--rads);padding:9px 14px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;display:flex;align-items:center;gap:5px;transition:var(--tr)}
 .btn-del:hover{background:rgba(185,28,28,.25)}
 
 .form-body{padding:16px;max-width:860px;padding-bottom:80px}
 
 /* Sections */
-.sec{background:var(–wh);border-radius:var(–rad);box-shadow:var(–sh);margin-bottom:14px;overflow:hidden}
+.sec{background:var(--wh);border-radius:var(--rad);box-shadow:var(--sh);margin-bottom:14px;overflow:hidden}
 .sec-hdr{padding:13px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #F0E8DC;cursor:pointer;user-select:none}
 .sec-hdr:hover{background:#FDFAF6}
-.sec-ico{width:30px;height:30px;border-radius:var(–radx);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
-.sec-title{font-weight:600;font-size:14px;color:var(–ink);flex:1}
-.sec-sub{font-size:11px;color:var(–mute);margin-top:1px}
-.sec-toggle{color:var(–mute);font-size:12px;transition:var(–tr)}
+.sec-ico{width:30px;height:30px;border-radius:var(--radx);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.sec-title{font-weight:600;font-size:14px;color:var(--ink);flex:1}
+.sec-sub{font-size:11px;color:var(--mute);margin-top:1px}
+.sec-toggle{color:var(--mute);font-size:12px;transition:var(--tr)}
 .sec-body{padding:16px}
 .sec-body.collapsed{display:none}
 
-.ic-info{background:var(–pl)}.ic-k{background:#FFF5E0}.ic-w{background:var(–gb)}
-.ic-m{background:var(–rb)}.ic-i{background:var(–ob)}.ic-t{background:var(–pb)}.ic-s{background:var(–bb)}
+.ic-info{background:var(--pl)}.ic-k{background:#FFF5E0}.ic-w{background:var(--gb)}
+.ic-m{background:var(--rb)}.ic-i{background:var(--ob)}.ic-t{background:var(--pb)}.ic-s{background:var(--bb)}
 
 /* Form fields */
 .fg{display:grid;gap:12px}
 .fg-2{grid-template-columns:1fr 1fr}
 .fg-3{grid-template-columns:1fr 1fr 1fr}
-.fld label{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(–mute);margin-bottom:5px}
+.fld label{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-bottom:5px}
 .fld input,.fld select,.fld textarea{
-width:100%;border:1.5px solid #E0D4C8;border-radius:var(–rads);
-padding:10px 12px;font-family:‘DM Sans’,sans-serif;font-size:14px;
-color:var(–ink);background:var(–cr);outline:none;transition:var(–tr);
--webkit-appearance:none;
+  width:100%;border:1.5px solid #E0D4C8;border-radius:var(--rads);
+  padding:10px 12px;font-family:'DM Sans',sans-serif;font-size:14px;
+  color:var(--ink);background:var(--cr);outline:none;transition:var(--tr);
+  -webkit-appearance:none;
 }
-.fld input:focus,.fld select:focus{border-color:var(–ac);background:var(–wh);box-shadow:0 0 0 3px rgba(139,94,60,.1)}
-.fld input[readonly]{background:#F8F4EE;color:var(–soft)}
-.fld select{background-image:url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ width=‘12’ height=‘12’ viewBox=‘0 0 12 12’%3E%3Cpath fill=’%239A8A7A’ d=‘M6 8L1 3h10z’/%3E%3C/svg%3E”);background-repeat:no-repeat;background-position:right 10px center;background-color:var(–cr);padding-right:28px}
+.fld input:focus,.fld select:focus{border-color:var(--ac);background:var(--wh);box-shadow:0 0 0 3px rgba(139,94,60,.1)}
+.fld input[readonly]{background:#F8F4EE;color:var(--soft)}
+.fld select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239A8A7A' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;background-color:var(--cr);padding-right:28px}
 
 /* Pozostało highlight */
-.pozostalo-box{background:var(–ob);border:1.5px solid #F5C87A;border-radius:var(–rads);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;margin-top:10px}
-.pozostalo-box.paid{background:var(–gb);border-color:var(–green-border,#A8DDB8)}
-.pozostalo-lbl{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(–o)}
-.pozostalo-box.paid .pozostalo-lbl{color:var(–g)}
-.pozostalo-val{font-family:‘DM Serif Display’,serif;font-size:20px;color:var(–o)}
-.pozostalo-box.paid .pozostalo-val{color:var(–g)}
+.pozostalo-box{background:var(--ob);border:1.5px solid #F5C87A;border-radius:var(--rads);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.pozostalo-box.paid{background:var(--gb);border-color:var(--green-border,#A8DDB8)}
+.pozostalo-lbl{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--o)}
+.pozostalo-box.paid .pozostalo-lbl{color:var(--g)}
+.pozostalo-val{font-family:'DM Serif Display',serif;font-size:20px;color:var(--o)}
+.pozostalo-box.paid .pozostalo-val{color:var(--g)}
 
 /* Dynamic tables */
 .dtbl{width:100%;border-collapse:collapse}
-.dtbl th{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(–mute);padding:6px 6px;border-bottom:1.5px solid #EDE4DA;text-align:left}
+.dtbl th{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);padding:6px 6px;border-bottom:1.5px solid #EDE4DA;text-align:left}
 .dtbl td{padding:4px 3px;vertical-align:middle}
 .dtbl input,.dtbl select{
-width:100%;border:1.5px solid transparent;border-radius:var(–radx);
-padding:7px 8px;font-family:‘DM Sans’,sans-serif;font-size:13px;
-color:var(–ink);background:transparent;outline:none;transition:var(–tr);
--webkit-appearance:none;
+  width:100%;border:1.5px solid transparent;border-radius:var(--radx);
+  padding:7px 8px;font-family:'DM Sans',sans-serif;font-size:13px;
+  color:var(--ink);background:transparent;outline:none;transition:var(--tr);
+  -webkit-appearance:none;
 }
-.dtbl input:hover,.dtbl select:hover{border-color:#E0D4C8;background:var(–cr)}
-.dtbl input:focus,.dtbl select:focus{border-color:var(–ac);background:var(–wh)}
+.dtbl input:hover,.dtbl select:hover{border-color:#E0D4C8;background:var(--cr)}
+.dtbl input:focus,.dtbl select:focus{border-color:var(--ac);background:var(--wh)}
 .dtbl tr:nth-child(even) td{background:#FDFAF6}
-.add-row-btn{display:flex;align-items:center;gap:6px;color:var(–ac);font-size:12px;font-weight:600;cursor:pointer;padding:9px 0 2px;background:none;border:none;font-family:‘DM Sans’,sans-serif;transition:var(–tr)}
-.add-row-btn:hover{color:var(–md)}
-.del-row{background:none;border:none;color:var(–mute);cursor:pointer;padding:5px 7px;border-radius:var(–radx);font-size:14px;transition:var(–tr);line-height:1;min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center}
-.del-row:hover{background:var(–rb);color:var(–r)}
-.row-total{font-weight:600;color:var(–soft);text-align:right;font-size:13px;padding:4px 6px;white-space:nowrap}
+.add-row-btn{display:flex;align-items:center;gap:6px;color:var(--ac);font-size:12px;font-weight:600;cursor:pointer;padding:9px 0 2px;background:none;border:none;font-family:'DM Sans',sans-serif;transition:var(--tr)}
+.add-row-btn:hover{color:var(--md)}
+.del-row{background:none;border:none;color:var(--mute);cursor:pointer;padding:5px 7px;border-radius:var(--radx);font-size:14px;transition:var(--tr);line-height:1;min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center}
+.del-row:hover{background:var(--rb);color:var(--r)}
+.row-total{font-weight:600;color:var(--soft);text-align:right;font-size:13px;padding:4px 6px;white-space:nowrap}
 
 /* Mobile table scroll */
 .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -188,87 +187,84 @@ color:var(–ink);background:transparent;outline:none;transition:var(–tr);
 /* Section totals */
 .sec-total{display:flex;justify-content:flex-end;padding-top:10px;border-top:1.5px solid #EDE4DA;margin-top:8px}
 .sec-total-inner{text-align:right}
-.sec-total-lbl{font-size:10px;color:var(–mute);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
-.sec-total-val{font-family:‘DM Serif Display’,serif;font-size:20px}
+.sec-total-lbl{font-size:10px;color:var(--mute);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+.sec-total-val{font-family:'DM Serif Display',serif;font-size:20px}
 
 /* Summary */
 .sum-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #F0E8DC}
 .sum-row:last-child{border-bottom:none}
-.sum-row.total{padding:14px 0;border-top:2px solid var(–dk);border-bottom:none;margin-top:4px}
+.sum-row.total{padding:14px 0;border-top:2px solid var(--dk);border-bottom:none;margin-top:4px}
 .sum-row.total .sum-lbl{font-weight:700;font-size:15px}
-.sum-row.total .sum-val{font-family:‘DM Serif Display’,serif;font-size:22px}
-.sum-lbl{font-size:13px;color:var(–soft)}
+.sum-row.total .sum-val{font-family:'DM Serif Display',serif;font-size:22px}
+.sum-lbl{font-size:13px;color:var(--soft)}
 .sum-val{font-weight:600;font-size:14px;font-variant-numeric:tabular-nums}
-.sum-val.pos{color:var(–g)}.sum-val.neg{color:var(–r)}.sum-val.neu{color:var(–mute)}
+.sum-val.pos{color:var(--g)}.sum-val.neg{color:var(--r)}.sum-val.neu{color:var(--mute)}
 
 /* Ktbl total */
 .ktbl-total{display:flex;justify-content:flex-end;align-items:center;gap:12px;padding:10px 6px 2px;border-top:1.5px solid #EDE4DA;margin-top:4px}
-.ktbl-total span{font-size:12px;color:var(–mute)}
-.ktbl-total strong{font-size:16px;color:var(–dk);font-family:‘DM Serif Display’,serif}
+.ktbl-total span{font-size:12px;color:var(--mute)}
+.ktbl-total strong{font-size:16px;color:var(--dk);font-family:'DM Serif Display',serif}
 
 /* ══ MODAL ══ */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(30,18,8,.55);z-index:300;align-items:flex-end;justify-content:center}
 .modal-bg.on{display:flex}
-.modal{background:var(–wh);border-radius:var(–rad) var(–rad) 0 0;padding:24px 20px 32px;width:100%;max-width:480px}
-.modal h3{font-family:‘DM Serif Display’,serif;font-size:20px;margin-bottom:8px}
-.modal p{color:var(–soft);font-size:13px;margin-bottom:20px;line-height:1.5}
+.modal{background:var(--wh);border-radius:var(--rad) var(--rad) 0 0;padding:24px 20px 32px;width:100%;max-width:480px}
+.modal h3{font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:8px}
+.modal p{color:var(--soft);font-size:13px;margin-bottom:20px;line-height:1.5}
 .modal-btns{display:flex;gap:10px}
-.mbtn{flex:1;border:none;border-radius:var(–rads);padding:12px;cursor:pointer;font-family:‘DM Sans’,sans-serif;font-size:14px;font-weight:600;transition:var(–tr)}
-.mbtn-cancel{background:var(–grb);color:var(–gr)}
-.mbtn-del{background:var(–r);color:var(–wh)}
+.mbtn{flex:1;border:none;border-radius:var(--rads);padding:12px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;transition:var(--tr)}
+.mbtn-cancel{background:var(--grb);color:var(--gr)}
+.mbtn-del{background:var(--r);color:var(--wh)}
 
 /* Toast */
-.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(–dk);color:var(–pl);padding:11px 20px;border-radius:var(–rads);font-size:13px;font-weight:500;box-shadow:var(–shm);opacity:0;transition:all .3s ease;z-index:400;white-space:nowrap;pointer-events:none}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--dk);color:var(--pl);padding:11px 20px;border-radius:var(--rads);font-size:13px;font-weight:500;box-shadow:var(--shm);opacity:0;transition:all .3s ease;z-index:400;white-space:nowrap;pointer-events:none}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
-.toast.ok::before{content:’✓  ’}
-.toast.err::before{content:’✗  ’}
+.toast.ok::before{content:'✓  '}
+.toast.err::before{content:'✗  '}
 
 /* Firebase config modal */
 .cfg-modal{display:none;position:fixed;inset:0;background:rgba(30,18,8,.7);z-index:500;align-items:center;justify-content:center;padding:16px}
 .cfg-modal.on{display:flex}
-.cfg-box{background:var(–wh);border-radius:var(–rad);padding:24px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
-.cfg-box h3{font-family:‘DM Serif Display’,serif;font-size:22px;margin-bottom:6px}
-.cfg-box p{color:var(–soft);font-size:13px;margin-bottom:16px;line-height:1.6}
-.cfg-step{background:var(–cr);border-radius:var(–rads);padding:12px 14px;margin-bottom:10px;border-left:3px solid var(–lt)}
+.cfg-box{background:var(--wh);border-radius:var(--rad);padding:24px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto}
+.cfg-box h3{font-family:'DM Serif Display',serif;font-size:22px;margin-bottom:6px}
+.cfg-box p{color:var(--soft);font-size:13px;margin-bottom:16px;line-height:1.6}
+.cfg-step{background:var(--cr);border-radius:var(--rads);padding:12px 14px;margin-bottom:10px;border-left:3px solid var(--lt)}
 .cfg-step strong{display:block;font-size:13px;margin-bottom:4px}
-.cfg-step span{font-size:12px;color:var(–soft)}
-.cfg-step a{color:var(–b)}
-.cfg-input{width:100%;border:1.5px solid #E0D4C8;border-radius:var(–rads);padding:10px 12px;font-family:‘DM Sans’,sans-serif;font-size:13px;color:var(–ink);background:var(–cr);outline:none;margin-top:6px;transition:var(–tr)}
-.cfg-input:focus{border-color:var(–ac);background:var(–wh)}
-.cfg-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(–mute);margin:12px 0 5px;display:block}
+.cfg-step span{font-size:12px;color:var(--soft)}
+.cfg-step a{color:var(--b)}
+.cfg-input{width:100%;border:1.5px solid #E0D4C8;border-radius:var(--rads);padding:10px 12px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);background:var(--cr);outline:none;margin-top:6px;transition:var(--tr)}
+.cfg-input:focus{border-color:var(--ac);background:var(--wh)}
+.cfg-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin:12px 0 5px;display:block}
 
 /* Bottom FAB (mobile) */
-.fab{display:none;position:fixed;bottom:20px;right:20px;z-index:100;background:var(–dk);color:var(–pl);border:none;border-radius:50px;padding:14px 22px;font-family:‘DM Sans’,sans-serif;font-size:14px;font-weight:700;box-shadow:0 4px 20px rgba(30,18,8,.35);cursor:pointer;align-items:center;gap:8px;transition:var(–tr)}
+.fab{display:none;position:fixed;bottom:20px;right:20px;z-index:100;background:var(--dk);color:var(--pl);border:none;border-radius:50px;padding:14px 22px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;box-shadow:0 4px 20px rgba(30,18,8,.35);cursor:pointer;align-items:center;gap:8px;transition:var(--tr)}
 .fab:active{transform:scale(.95)}
 
 /* ══ RESPONSIVE ══ */
 @media(max-width:640px){
-.tbl{display:none}
-.mcards{display:flex}
-.fab{display:flex}
-.ltool .btn-pri{display:none}
-.fg-2,.fg-3{grid-template-columns:1fr}
-.form-body{padding:12px}
-.fhdr h2{font-size:16px}
-.tbl-scroll{border-radius:var(–rad)}
+  .tbl{display:none}
+  .mcards{display:flex}
+  .fab{display:flex}
+  .ltool .btn-pri{display:none}
+  .fg-2,.fg-3{grid-template-columns:1fr}
+  .form-body{padding:12px}
+  .fhdr h2{font-size:16px}
+  .tbl-scroll{border-radius:var(--rad)}
 }
 @media(min-width:641px){
-.tbl{display:table}
-.mcards{display:none}
+  .tbl{display:table}
+  .mcards{display:none}
 }
 </style>
-
 </head>
 <body>
 
 <!-- ══ FIREBASE CONFIG BANNER ══ -->
-
 <div class="config-banner" id="cfgBanner">
   ⚙️ <span><strong>Firebase nie jest skonfigurowane.</strong> Dane zapisują się lokalnie (tylko na tym urządzeniu). <a onclick="openCfg()">Kliknij tutaj</a> aby skonfigurować synchronizację.</span>
 </div>
 
 <!-- ══ TOPBAR ══ -->
-
 <div class="top">
   <div class="logo">🪑 Fabryka <em>Mebli</em></div>
   <div class="top-acts">
@@ -285,7 +281,6 @@ color:var(–ink);background:transparent;outline:none;transition:var(–tr);
 </div>
 
 <!-- ══ LIST VIEW ══ -->
-
 <div class="view on" id="viewList">
   <div class="lhdr">
     <h1>Zamówienia</h1>
@@ -301,7 +296,6 @@ color:var(–ink);background:transparent;outline:none;transition:var(–tr);
   <div class="ftabs" id="ftabs"></div>
 
   <!-- Desktop table -->
-
   <div class="twrap">
     <div class="tbl-scroll">
       <table class="tbl">
@@ -318,12 +312,10 @@ color:var(–ink);background:transparent;outline:none;transition:var(–tr);
   </div>
 
   <!-- Mobile cards -->
-
   <div class="mcards" id="mobileCards"></div>
 </div>
 
 <!-- ══ FORM VIEW ══ -->
-
 <div class="view" id="viewForm">
   <div class="fhdr">
     <div class="fhdr-l">
@@ -338,218 +330,215 @@ color:var(–ink);background:transparent;outline:none;transition:var(–tr);
 
   <div class="form-body">
 
-```
-<!-- INFO -->
-<div class="sec">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <div class="sec-ico ic-info">📋</div>
-    <div style="flex:1"><div class="sec-title">Informacje o zamówieniu</div><div class="sec-sub">Klient, adres, status</div></div>
-    <span class="sec-toggle">▲</span>
-  </div>
-  <div class="sec-body">
-    <div class="fg fg-3" style="margin-bottom:12px">
-      <div class="fld">
-        <label>Numer zamówienia</label>
-        <input id="f-nr" placeholder="np. ZAM-001">
+    <!-- INFO -->
+    <div class="sec">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <div class="sec-ico ic-info">📋</div>
+        <div style="flex:1"><div class="sec-title">Informacje o zamówieniu</div><div class="sec-sub">Klient, adres, status</div></div>
+        <span class="sec-toggle">▲</span>
       </div>
-      <div class="fld"><label>Data</label><input id="f-date" type="date"></div>
-      <div class="fld"><label>Status</label>
-        <select id="f-status">
-          <option value="wycena">📄 Wycena</option>
-          <option value="pomiar">📏 Pomiar</option>
-          <option value="projekt">✏️ Projekt</option>
-          <option value="zamowienie">📦 Zamówienie</option>
-          <option value="montaz">🔨 Montaż</option>
-          <option value="poprawki">🔧 Poprawki</option>
-          <option value="zakonczone">✅ Zakończone</option>
-        </select>
+      <div class="sec-body">
+        <div class="fg fg-3" style="margin-bottom:12px">
+          <div class="fld">
+            <label>Numer zamówienia</label>
+            <input id="f-nr" placeholder="np. ZAM-001">
+          </div>
+          <div class="fld"><label>Data</label><input id="f-date" type="date"></div>
+          <div class="fld"><label>Status</label>
+            <select id="f-status">
+              <option value="wycena">📄 Wycena</option>
+              <option value="pomiar">📏 Pomiar</option>
+              <option value="projekt">✏️ Projekt</option>
+              <option value="zamowienie">📦 Zamówienie</option>
+              <option value="montaz">🔨 Montaż</option>
+              <option value="poprawki">🔧 Poprawki</option>
+              <option value="zakonczone">✅ Zakończone</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg fg-2" style="margin-bottom:12px">
+          <div class="fld"><label>Imię i nazwisko klienta</label><input id="f-client" placeholder="np. Jan Kowalski"></div>
+          <div class="fld"><label>Adres / Ulica</label><input id="f-addr" placeholder="np. ul. Kwiatowa 5"></div>
+        </div>
+        <div class="fg fg-3" style="margin-bottom:12px">
+          <div class="fld"><label>Telefon</label><input id="f-phone" placeholder="+48 …" type="tel"></div>
+          <div class="fld"><label>Kosztorys dla klienta (zł)</label><input id="f-kosztorys" type="number" min="0" step="0.01" placeholder="0.00" oninput="recalcAll()"></div>
+          <div class="fld"><label>Planowane koszty (zł)</label><input id="f-planned" type="number" min="0" step="0.01" placeholder="0.00"></div>
+        </div>
+        <div class="fld"><label>Uwagi</label><input id="f-notes" placeholder="Dodatkowe informacje…"></div>
+        <!-- Pozostało box -->
+        <div class="pozostalo-box" id="pozostalo-box" style="margin-top:12px">
+          <div>
+            <div class="pozostalo-lbl" id="pozostalo-lbl">Pozostało do zapłaty</div>
+            <div style="font-size:11px;color:var(--soft);margin-top:2px" id="pozostalo-sub">Kosztorys − Otrzymano</div>
+          </div>
+          <div class="pozostalo-val" id="pozostalo-val">0,00 zł</div>
+        </div>
       </div>
     </div>
-    <div class="fg fg-2" style="margin-bottom:12px">
-      <div class="fld"><label>Imię i nazwisko klienta</label><input id="f-client" placeholder="np. Jan Kowalski"></div>
-      <div class="fld"><label>Adres / Ulica</label><input id="f-addr" placeholder="np. ul. Kwiatowa 5"></div>
-    </div>
-    <div class="fg fg-3" style="margin-bottom:12px">
-      <div class="fld"><label>Telefon</label><input id="f-phone" placeholder="+48 …" type="tel"></div>
-      <div class="fld"><label>Kosztorys dla klienta (zł)</label><input id="f-kosztorys" type="number" min="0" step="0.01" placeholder="0.00" oninput="recalcAll()"></div>
-      <div class="fld"><label>Planowane koszty (zł)</label><input id="f-planned" type="number" min="0" step="0.01" placeholder="0.00"></div>
-    </div>
-    <div class="fld"><label>Uwagi</label><input id="f-notes" placeholder="Dodatkowe informacje…"></div>
-    <!-- Pozostało box -->
-    <div class="pozostalo-box" id="pozostalo-box" style="margin-top:12px">
-      <div>
-        <div class="pozostalo-lbl" id="pozostalo-lbl">Pozostało do zapłaty</div>
-        <div style="font-size:11px;color:var(--soft);margin-top:2px" id="pozostalo-sub">Kosztorys − Otrzymano</div>
+
+    <!-- KOSZTORYS -->
+    <div class="sec">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <div class="sec-ico ic-k">🪵</div>
+        <div style="flex:1"><div class="sec-title">Kosztorys szczegółowy</div><div class="sec-sub">Materiały i akcesoria dla klienta</div></div>
+        <span class="sec-toggle">▲</span>
       </div>
-      <div class="pozostalo-val" id="pozostalo-val">0,00 zł</div>
-    </div>
-  </div>
-</div>
-
-<!-- KOSZTORYS -->
-<div class="sec">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <div class="sec-ico ic-k">🪵</div>
-    <div style="flex:1"><div class="sec-title">Kosztorys szczegółowy</div><div class="sec-sub">Materiały i akcesoria dla klienta</div></div>
-    <span class="sec-toggle">▲</span>
-  </div>
-  <div class="sec-body">
-    <div class="tbl-scroll">
-      <table class="dtbl" style="min-width:520px">
-        <thead><tr>
-          <th style="width:38%">Nazwa pozycji</th>
-          <th style="width:10%">Jedn.</th>
-          <th style="width:12%">Ilość</th>
-          <th style="width:18%">Cena jedn. (zł)</th>
-          <th style="width:16%">Suma (zł)</th>
-          <th style="width:6%"></th>
-        </tr></thead>
-        <tbody id="kosztorys-body"></tbody>
-      </table>
-    </div>
-    <div class="ktbl-total"><span>Razem kosztorys:</span><strong id="kosztorys-total">0,00 zł</strong></div>
-    <button class="add-row-btn" onclick="addKRow()">＋ Dodaj pozycję</button>
-  </div>
-</div>
-
-<!-- WPŁATY -->
-<div class="sec">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <div class="sec-ico ic-w">💰</div>
-    <div style="flex:1"><div class="sec-title">Wpłaty od klienta</div><div class="sec-sub">Zaliczki i płatności</div></div>
-    <span class="sec-toggle">▲</span>
-  </div>
-  <div class="sec-body">
-    <div class="tbl-scroll">
-      <table class="dtbl" style="min-width:460px">
-        <thead><tr>
-          <th style="width:35%">Opis</th>
-          <th style="width:22%">Data</th>
-          <th style="width:22%">Kwota (zł)</th>
-          <th style="width:21%">Uwagi</th>
-        </tr></thead>
-        <tbody id="wplaty-body"></tbody>
-      </table>
-    </div>
-    <button class="add-row-btn" onclick="addWRow()">＋ Dodaj wpłatę</button>
-    <div class="sec-total"><div class="sec-total-inner">
-      <div class="sec-total-lbl">Razem otrzymano</div>
-      <div class="sec-total-val" style="color:var(--g)" id="wplaty-total">0,00 zł</div>
-    </div></div>
-  </div>
-</div>
-
-<!-- MATERIAŁY -->
-<div class="sec">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <div class="sec-ico ic-m">🔧</div>
-    <div style="flex:1"><div class="sec-title">Koszty materiałów</div><div class="sec-sub">Faktury od dostawców</div></div>
-    <span class="sec-toggle">▲</span>
-  </div>
-  <div class="sec-body">
-    <div class="tbl-scroll">
-      <table class="dtbl" style="min-width:480px">
-        <thead><tr>
-          <th style="width:26%">Dostawca</th>
-          <th style="width:28%">Opis / Nr faktury</th>
-          <th style="width:18%">Data</th>
-          <th style="width:20%">Kwota (zł)</th>
-          <th style="width:8%"></th>
-        </tr></thead>
-        <tbody id="materials-body"></tbody>
-      </table>
-    </div>
-    <button class="add-row-btn" onclick="addMRow()">＋ Dodaj fakturę</button>
-    <div class="sec-total"><div class="sec-total-inner">
-      <div class="sec-total-lbl">Razem materiały</div>
-      <div class="sec-total-val" style="color:var(--r)" id="materials-total">0,00 zł</div>
-    </div></div>
-  </div>
-</div>
-
-<!-- INNE KOSZTY -->
-<div class="sec">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <div class="sec-ico ic-i">🚚</div>
-    <div style="flex:1"><div class="sec-title">Inne koszty</div><div class="sec-sub">Dostawa, przeróbki, parking i inne</div></div>
-    <span class="sec-toggle">▲</span>
-  </div>
-  <div class="sec-body">
-    <div class="fg fg-3" style="margin-bottom:14px">
-      <div class="fld"><label>Dostawa (zł)</label><input id="f-dostawa" type="number" min="0" step="0.01" placeholder="0.00" oninput="recalcAll()"></div>
-      <div class="fld"><label>Przeróbki (zł)</label><input id="f-przerobki" type="number" min="0" step="0.01" placeholder="0.00" oninput="recalcAll()"></div>
-      <div class="fld"><label>Parking (zł)</label><input id="f-parking" type="number" min="0" step="0.01" placeholder="0.00" oninput="recalcAll()"></div>
-    </div>
-    <div style="margin-top:4px">
-      <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-bottom:8px">Inne (dowolne)</div>
-      <div class="tbl-scroll">
-        <table class="dtbl" style="min-width:380px">
-          <thead><tr>
-            <th style="width:44%">Opis kosztu</th>
-            <th style="width:26%">Data</th>
-            <th style="width:24%">Kwota (zł)</th>
-            <th style="width:6%"></th>
-          </tr></thead>
-          <tbody id="other-body"></tbody>
-        </table>
+      <div class="sec-body">
+        <div class="tbl-scroll">
+          <table class="dtbl" style="min-width:520px">
+            <thead><tr>
+              <th style="width:38%">Nazwa pozycji</th>
+              <th style="width:10%">Jedn.</th>
+              <th style="width:12%">Ilość</th>
+              <th style="width:18%">Cena jedn. (zł)</th>
+              <th style="width:16%">Suma (zł)</th>
+              <th style="width:6%"></th>
+            </tr></thead>
+            <tbody id="kosztorys-body"></tbody>
+          </table>
+        </div>
+        <div class="ktbl-total"><span>Razem kosztorys:</span><strong id="kosztorys-total">0,00 zł</strong></div>
+        <button class="add-row-btn" onclick="addKRow()">＋ Dodaj pozycję</button>
       </div>
-      <button class="add-row-btn" onclick="addORow()">＋ Dodaj inny koszt</button>
     </div>
-    <div class="sec-total"><div class="sec-total-inner">
-      <div class="sec-total-lbl">Razem inne koszty</div>
-      <div class="sec-total-val" style="color:var(--o)" id="inne-total">0,00 zł</div>
-    </div></div>
-  </div>
-</div>
 
-<!-- PODATEK -->
-<div class="sec">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <div class="sec-ico ic-t">🏛️</div>
-    <div style="flex:1"><div class="sec-title">Podatek</div><div class="sec-sub">Auto: 80%×5,5% + 20%×8,5%</div></div>
-    <span class="sec-toggle">▲</span>
-  </div>
-  <div class="sec-body">
-    <div class="fg fg-3">
-      <div class="fld"><label>Podstawa (kosztorys)</label><input id="tax-base" readonly></div>
-      <div class="fld"><label>80% × 5,5%</label><input id="tax-a" readonly></div>
-      <div class="fld"><label>20% × 8,5%</label><input id="tax-b" readonly></div>
+    <!-- WPŁATY -->
+    <div class="sec">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <div class="sec-ico ic-w">💰</div>
+        <div style="flex:1"><div class="sec-title">Wpłaty od klienta</div><div class="sec-sub">Zaliczki i płatności</div></div>
+        <span class="sec-toggle">▲</span>
+      </div>
+      <div class="sec-body">
+        <div class="tbl-scroll">
+          <table class="dtbl" style="min-width:460px">
+            <thead><tr>
+              <th style="width:35%">Opis</th>
+              <th style="width:22%">Data</th>
+              <th style="width:22%">Kwota (zł)</th>
+              <th style="width:21%">Uwagi</th>
+            </tr></thead>
+            <tbody id="wplaty-body"></tbody>
+          </table>
+        </div>
+        <button class="add-row-btn" onclick="addWRow()">＋ Dodaj wpłatę</button>
+        <div class="sec-total"><div class="sec-total-inner">
+          <div class="sec-total-lbl">Razem otrzymano</div>
+          <div class="sec-total-val" style="color:var(--g)" id="wplaty-total">0,00 zł</div>
+        </div></div>
+      </div>
     </div>
-    <div class="sec-total"><div class="sec-total-inner">
-      <div class="sec-total-lbl">Razem podatek</div>
-      <div class="sec-total-val" style="color:var(--p)" id="tax-total">0,00 zł</div>
-    </div></div>
-  </div>
-</div>
 
-<!-- PODSUMOWANIE -->
-<div class="sec">
-  <div class="sec-hdr" onclick="toggleSec(this)">
-    <div class="sec-ico ic-s">📊</div>
-    <div style="flex:1"><div class="sec-title">Podsumowanie finansowe</div><div class="sec-sub">Wynik zamówienia</div></div>
-    <span class="sec-toggle">▲</span>
-  </div>
-  <div class="sec-body">
-    <div class="sum-row"><span class="sum-lbl">💰 Łącznie otrzymano</span><span class="sum-val pos" id="s-recv">0,00 zł</span></div>
-    <div class="sum-row"><span class="sum-lbl">🔧 Koszty materiałów</span><span class="sum-val" id="s-mat">0,00 zł</span></div>
-    <div class="sum-row"><span class="sum-lbl">🚚 Inne koszty</span><span class="sum-val" id="s-inne">0,00 zł</span></div>
-    <div class="sum-row"><span class="sum-lbl">🏛️ Podatek</span><span class="sum-val" id="s-tax">0,00 zł</span></div>
-    <div class="sum-row"><span class="sum-lbl" style="font-weight:600">📉 Łączne koszty rzeczywiste</span><span class="sum-val neg" id="s-cost">0,00 zł</span></div>
-    <div class="sum-row"><span class="sum-lbl">⏳ Pozostało do zapłaty</span><span class="sum-val" id="s-pozostalo" style="color:var(--o)">0,00 zł</span></div>
-    <div class="sum-row total">
-      <span class="sum-lbl">🏆 Zysk netto</span>
-      <span class="sum-val" id="s-profit">0,00 zł</span>
+    <!-- MATERIAŁY -->
+    <div class="sec">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <div class="sec-ico ic-m">🔧</div>
+        <div style="flex:1"><div class="sec-title">Koszty materiałów</div><div class="sec-sub">Faktury od dostawców</div></div>
+        <span class="sec-toggle">▲</span>
+      </div>
+      <div class="sec-body">
+        <div class="tbl-scroll">
+          <table class="dtbl" style="min-width:480px">
+            <thead><tr>
+              <th style="width:26%">Dostawca</th>
+              <th style="width:28%">Opis / Nr faktury</th>
+              <th style="width:18%">Data</th>
+              <th style="width:20%">Kwota (zł)</th>
+              <th style="width:8%"></th>
+            </tr></thead>
+            <tbody id="materials-body"></tbody>
+          </table>
+        </div>
+        <button class="add-row-btn" onclick="addMRow()">＋ Dodaj fakturę</button>
+        <div class="sec-total"><div class="sec-total-inner">
+          <div class="sec-total-lbl">Razem materiały</div>
+          <div class="sec-total-val" style="color:var(--r)" id="materials-total">0,00 zł</div>
+        </div></div>
+      </div>
     </div>
-    <div class="sum-row"><span class="sum-lbl" style="color:var(--mute)">📈 Rentowność</span><span class="sum-val neu" id="s-margin">—</span></div>
-  </div>
-</div>
-```
+
+    <!-- INNE KOSZTY -->
+    <div class="sec">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <div class="sec-ico ic-i">🚚</div>
+        <div style="flex:1"><div class="sec-title">Inne koszty</div><div class="sec-sub">Dostawa, przeróbki, parking i inne</div></div>
+        <span class="sec-toggle">▲</span>
+      </div>
+      <div class="sec-body">
+        <div class="fg fg-3" style="margin-bottom:14px">
+          <div class="fld"><label>Dostawa (zł)</label><input id="f-dostawa" type="number" min="0" step="0.01" placeholder="0.00" oninput="recalcAll()"></div>
+          <div class="fld"><label>Przeróbki (zł)</label><input id="f-przerobki" type="number" min="0" step="0.01" placeholder="0.00" oninput="recalcAll()"></div>
+          <div class="fld"><label>Parking (zł)</label><input id="f-parking" type="number" min="0" step="0.01" placeholder="0.00" oninput="recalcAll()"></div>
+        </div>
+        <div style="margin-top:4px">
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-bottom:8px">Inne (dowolne)</div>
+          <div class="tbl-scroll">
+            <table class="dtbl" style="min-width:380px">
+              <thead><tr>
+                <th style="width:44%">Opis kosztu</th>
+                <th style="width:26%">Data</th>
+                <th style="width:24%">Kwota (zł)</th>
+                <th style="width:6%"></th>
+              </tr></thead>
+              <tbody id="other-body"></tbody>
+            </table>
+          </div>
+          <button class="add-row-btn" onclick="addORow()">＋ Dodaj inny koszt</button>
+        </div>
+        <div class="sec-total"><div class="sec-total-inner">
+          <div class="sec-total-lbl">Razem inne koszty</div>
+          <div class="sec-total-val" style="color:var(--o)" id="inne-total">0,00 zł</div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- PODATEK -->
+    <div class="sec">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <div class="sec-ico ic-t">🏛️</div>
+        <div style="flex:1"><div class="sec-title">Podatek</div><div class="sec-sub">Auto: 80%×5,5% + 20%×8,5%</div></div>
+        <span class="sec-toggle">▲</span>
+      </div>
+      <div class="sec-body">
+        <div class="fg fg-3">
+          <div class="fld"><label>Podstawa (kosztorys)</label><input id="tax-base" readonly></div>
+          <div class="fld"><label>80% × 5,5%</label><input id="tax-a" readonly></div>
+          <div class="fld"><label>20% × 8,5%</label><input id="tax-b" readonly></div>
+        </div>
+        <div class="sec-total"><div class="sec-total-inner">
+          <div class="sec-total-lbl">Razem podatek</div>
+          <div class="sec-total-val" style="color:var(--p)" id="tax-total">0,00 zł</div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- PODSUMOWANIE -->
+    <div class="sec">
+      <div class="sec-hdr" onclick="toggleSec(this)">
+        <div class="sec-ico ic-s">📊</div>
+        <div style="flex:1"><div class="sec-title">Podsumowanie finansowe</div><div class="sec-sub">Wynik zamówienia</div></div>
+        <span class="sec-toggle">▲</span>
+      </div>
+      <div class="sec-body">
+        <div class="sum-row"><span class="sum-lbl">💰 Łącznie otrzymano</span><span class="sum-val pos" id="s-recv">0,00 zł</span></div>
+        <div class="sum-row"><span class="sum-lbl">🔧 Koszty materiałów</span><span class="sum-val" id="s-mat">0,00 zł</span></div>
+        <div class="sum-row"><span class="sum-lbl">🚚 Inne koszty</span><span class="sum-val" id="s-inne">0,00 zł</span></div>
+        <div class="sum-row"><span class="sum-lbl">🏛️ Podatek</span><span class="sum-val" id="s-tax">0,00 zł</span></div>
+        <div class="sum-row"><span class="sum-lbl" style="font-weight:600">📉 Łączne koszty rzeczywiste</span><span class="sum-val neg" id="s-cost">0,00 zł</span></div>
+        <div class="sum-row"><span class="sum-lbl">⏳ Pozostało do zapłaty</span><span class="sum-val" id="s-pozostalo" style="color:var(--o)">0,00 zł</span></div>
+        <div class="sum-row total">
+          <span class="sum-lbl">🏆 Zysk netto</span>
+          <span class="sum-val" id="s-profit">0,00 zł</span>
+        </div>
+        <div class="sum-row"><span class="sum-lbl" style="color:var(--mute)">📈 Rentowność</span><span class="sum-val neu" id="s-margin">—</span></div>
+      </div>
+    </div>
 
   </div>
 </div>
 
 <!-- ══ DELETE MODAL ══ -->
-
 <div class="modal-bg" id="delModal">
   <div class="modal">
     <h3>Usunąć zamówienie?</h3>
@@ -562,7 +551,6 @@ color:var(–ink);background:transparent;outline:none;transition:var(–tr);
 </div>
 
 <!-- ══ FIREBASE CONFIG MODAL ══ -->
-
 <div class="cfg-modal" id="cfgModal">
   <div class="cfg-box">
     <h3>⚙️ Konfiguracja Firebase</h3>
@@ -598,15 +586,12 @@ color:var(–ink);background:transparent;outline:none;transition:var(–tr);
 </div>
 
 <!-- ══ FAB (mobile) ══ -->
-
 <button class="fab" onclick="newOrder()">＋ Nowy klient</button>
 
 <!-- ══ TOAST ══ -->
-
 <div class="toast" id="toast"></div>
 
 <!-- ══ FIREBASE SDK ══ -->
-
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
 import { getFirestore, collection, onSnapshot, doc, setDoc, deleteDoc, getDocs }
@@ -1191,6 +1176,5 @@ function importData(evt){
 loadLocal();
 renderList();
 </script>
-
 </body>
 </html>
