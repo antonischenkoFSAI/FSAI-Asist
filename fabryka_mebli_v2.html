@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="theme-color" content="#1E1208">
-    <title>FSAI CRM - System Zarządzania</title>
+    <title>FSAI CRM - Meble</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -17,36 +17,29 @@
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
         body { font-family: 'DM Sans', sans-serif; background: var(--cr); color: var(--ink); font-size: 14px; }
         
-        /* HEADER */
-        .top { background: var(--dk); height: 54px; padding: 0 15px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 200; box-shadow: 0 2px 20px rgba(0,0,0,.35); transition: var(--tr); }
+        .top { background: var(--dk); height: 54px; padding: 0 15px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 200; box-shadow: 0 2px 20px rgba(0,0,0,.35); }
         .logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--pl); }
         .logo em { color: var(--lt); font-style: italic; }
-        
-        .top-right { display: flex; gap: 12px; align-items: center; }
         .icon-btn { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--pl); opacity: 0.8; }
-
         .sync-dot { width: 8px; height: 8px; border-radius: 50%; background: #f44336; display: inline-block; }
         .sync-dot.on { background: #4CAF50; box-shadow: 0 0 8px #4CAF50; }
 
-        /* VIEWS */
         .view { display: none; padding-bottom: 100px; animation: fadeIn 0.3s ease; }
         .view.on { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .lhdr { background: linear-gradient(135deg, var(--dk), var(--md)); padding: 25px 20px; color: var(--pl); transition: var(--tr); }
+        .lhdr { background: linear-gradient(135deg, var(--dk), var(--md)); padding: 25px 20px; color: var(--pl); }
         .ltool { padding: 12px 16px; background: var(--pl); display: flex; gap: 10px; border-bottom: 1px solid #E0D4C8; }
         .search { background: var(--wh); border: 1.5px solid #E0D4C8; border-radius: var(--rads); padding: 8px 12px; flex: 1; }
         .search input { border: none; outline: none; width: 100%; background: transparent; font-family: inherit; }
 
-        /* TABLE & CARDS */
         .twrap { padding: 16px; }
         .tbl { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--wh); border-radius: var(--rad); overflow: hidden; box-shadow: var(--sh); }
-        .tbl th { background: var(--dk); color: var(--pl); font-size: 10px; padding: 12px; text-align: left; text-transform: uppercase; letter-spacing: 1px; }
+        .tbl th { background: var(--dk); color: var(--pl); font-size: 10px; padding: 12px; text-align: left; text-transform: uppercase; }
         .tbl td { padding: 14px 12px; border-bottom: 1px solid #F2EAE0; cursor: pointer; }
 
         .mcard { background: white; margin: 10px 16px; padding: 16px; border-radius: var(--rad); box-shadow: var(--sh); border-left: 4px solid var(--lt); display: none; }
 
-        /* FORMS */
         .fhdr { background: var(--dk); padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; color: var(--pl); position: sticky; top: 0; z-index: 100; }
         .tbtn { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); color: white; padding: 8px 14px; border-radius: var(--rads); cursor: pointer; font-size: 12px; font-weight: 600; }
         .tbtn.accent { background: var(--lt); color: var(--dk); border: none; }
@@ -58,16 +51,16 @@
         .fg { display: grid; gap: 12px; margin-bottom: 12px; }
         .fg-2 { grid-template-columns: 1fr 1fr; }
         .fld label { display: block; font-size: 11px; font-weight: 600; color: var(--mute); margin-bottom: 5px; text-transform: uppercase; }
-        .fld input, .fld select { width: 100%; border: 1.5px solid #E0D4C8; border-radius: var(--rads); padding: 11px; background: var(--cr); outline: none; font-family: inherit; }
+        .fld input, .fld select, .fld textarea { width: 100%; border: 1.5px solid #E0D4C8; border-radius: var(--rads); padding: 11px; background: var(--cr); outline: none; font-family: inherit; }
+        .fld textarea { resize: none; height: 80px; }
 
-        /* CALC BOXES */
         .res-box { padding: 14px; border-radius: var(--rads); display: flex; justify-content: space-between; margin-top: 10px; font-weight: 600; }
         .res-pozostalo { background: var(--ob); color: var(--o); border: 1px solid #F5C87A; }
         .res-zysk { background: var(--gb); color: var(--g); border: 1px solid #A8DDB8; }
 
         .badge { padding: 4px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
         .s-wycena { background: #eee; color: #666; }
-        .s-montaz { background: var(--bb); color: var(--b); }
+        .s-montaz { background: #EEF2FF; color: #1D4ED8; }
         .s-zakonczone { background: var(--gb); color: var(--g); }
 
         .fab { position: fixed; bottom: 25px; right: 25px; background: var(--dk); color: white; border: none; border-radius: 50px; width: 56px; height: 56px; font-size: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 50; cursor: pointer; }
@@ -92,11 +85,11 @@
 <div class="view on" id="viewList">
     <div class="lhdr" id="lhdr-bg">
         <h1 id="header-title">Lista Zamówień</h1>
-        <p id="lhdr-sub">Ładowanie danych...</p>
+        <p id="lhdr-sub">Ładowanie...</p>
     </div>
     <div class="ltool">
         <div class="search"><input type="text" placeholder="Szukaj klienta..." oninput="renderList(this.value)"></div>
-        <button class="tbtn accent" onclick="newOrder()" style="padding: 10px 18px;">＋ NOWY</button>
+        <button class="tbtn accent" onclick="newOrder()">＋ NOWY</button>
     </div>
     <div class="twrap">
         <table class="tbl">
@@ -115,59 +108,59 @@
     </div>
 
     <div class="sec">
-        <div class="sec-hdr">📋 DANE PODSTAWOWE</div>
+        <div class="sec-hdr">👤 DANE KLIENTA</div>
         <div class="sec-body">
             <div class="fg fg-2">
-                <div class="fld"><label>Nazwa Klienta</label><input id="f-client" placeholder="Np. Jan Kowalski"></div>
+                <div class="fld"><label>Imię i Nazwisko</label><input id="f-client"></div>
+                <div class="fld"><label>Telefon</label><input id="f-phone" type="tel"></div>
+            </div>
+            <div class="fld"><label>Adres Montażu</label><input id="f-addr"></div>
+            <div class="fg fg-2">
+                <div class="fld"><label>Data zamówienia</label><input id="f-date" type="date"></div>
                 <div class="fld"><label>Status</label>
                     <select id="f-status">
                         <option value="wycena">Wycena</option>
                         <option value="pomiar">Pomiar / Projekt</option>
-                        <option value="montaz">Montaż w trakcie</option>
-                        <option value="zakonczone">Zakończone / Rozliczone</option>
+                        <option value="montaz">Montaż</option>
+                        <option value="zakonczone">Zakończone</option>
                     </select>
                 </div>
             </div>
-            <div class="fld"><label>Całkowita Wycena (zł)</label><input id="f-kosztorys" type="number" oninput="recalc()"></div>
         </div>
     </div>
 
     <div class="sec">
-        <div class="sec-hdr">💰 ROZLICZENIE FINANSOWE</div>
+        <div class="sec-hdr">💰 ROZLICZENIE</div>
         <div class="sec-body">
+            <div class="fld"><label>Całkowita Wycena (zł)</label><input id="f-kosztorys" type="number" oninput="recalc()"></div>
             <div class="fg fg-2">
-                <div class="fld"><label>Otrzymano od klienta (zł)</label><input id="f-received" type="number" oninput="recalc()" placeholder="Suma wpłat"></div>
-                <div class="fld"><label>Koszty (materiały itp.) (zł)</label><input id="f-costs" type="number" oninput="recalc()" placeholder="Wydatki"></div>
+                <div class="fld"><label>Otrzymano (Wpłaty) (zł)</label><input id="f-received" type="number" oninput="recalc()"></div>
+                <div class="fld"><label>Koszty (Materiały) (zł)</label><input id="f-costs" type="number" oninput="recalc()"></div>
             </div>
-            
-            <div class="res-box res-pozostalo">
-                <span>POZOSTAŁO DO ZAPŁATY:</span>
-                <span id="res-pozostalo">0,00 zł</span>
-            </div>
-            <div class="res-box res-zysk">
-                <span>TWÓJ AKTUALNY ZYSK:</span>
-                <span id="res-zysk">0,00 zł</span>
-            </div>
+            <div class="res-box res-pozostalo"><span>Pozostało:</span><span id="res-pozostalo">0,00 zł</span></div>
+            <div class="res-box res-zysk"><span>Zysk:</span><span id="res-zysk">0,00 zł</span></div>
+        </div>
+    </div>
+
+    <div class="sec">
+        <div class="sec-hdr">📝 NOTATKI</div>
+        <div class="sec-body">
+            <div class="fld"><label>Uwagi do zamówienia</label><textarea id="f-notes" placeholder="Np. kolor frontów, termin dostawy..."></textarea></div>
         </div>
     </div>
     
-    <button class="tbtn" id="btn-del" style="background:var(--r); color:white; margin: 20px; width: calc(100% - 40px); border:none; padding:15px;" onclick="confirmDelete()">🗑 USUŃ ZAMÓWIENIE</button>
+    <button class="tbtn" id="btn-del" style="background:var(--r); color:white; margin: 20px; width: calc(100% - 40px); border:none; padding:15px; display:none" onclick="confirmDelete()">🗑 USUŃ ZAMÓWIENIE</button>
 </div>
 
 <div class="view" id="viewSettings">
-    <div class="fhdr">
-        <button class="tbtn" onclick="goList()">← WRÓĆ</button>
-        <h2>USTAWIENIA</h2>
-        <button class="tbtn accent" onclick="saveSettings()">ZAPISZ ✓</button>
-    </div>
-
+    <div class="fhdr"><button class="tbtn" onclick="goList()">← WRÓĆ</button><h2>USTAWIENIA</h2><button class="tbtn accent" onclick="saveSettings()">ZAPISZ</button></div>
     <div class="sec">
         <div class="sec-hdr">🎨 PERSONALIZACJA</div>
         <div class="sec-body">
-            <div class="fld"><label>Nazwa Twojej Firmy</label><input id="s-name" placeholder="Fabryka Mebli"></div>
+            <div class="fld"><label>Nazwa Firmy</label><input id="s-name"></div>
             <div class="fg fg-2" style="margin-top:15px">
-                <div class="fld"><label>Kolor Główny (Ciemny)</label><input type="color" id="s-color-dk" style="height:50px"></div>
-                <div class="fld"><label>Kolor Akcentu (Złoty/Jasny)</label><input type="color" id="s-color-ac" style="height:50px"></div>
+                <div class="fld"><label>Kolor Ciemny</label><input type="color" id="s-color-dk" style="height:50px"></div>
+                <div class="fld"><label>Kolor Akcentu</label><input type="color" id="s-color-ac" style="height:50px"></div>
             </div>
         </div>
     </div>
@@ -190,7 +183,6 @@
     const db = getFirestore(app);
     window._db = db;
 
-    // Listen for Orders
     onSnapshot(collection(db, 'zamowienia'), (snap) => {
         window._orders = snap.docs.map(d => ({ id: d.id, ...d.data() }));
         window._orders.sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''));
@@ -198,16 +190,18 @@
         renderList();
     });
 
-    // Listen for UI Config
     onSnapshot(doc(db, 'config', 'ui'), (snap) => {
         if(snap.exists()) applySettings(snap.data());
     });
 
-    // GLOBAL SAVE ACTIONS
     window.saveOrder = async function() {
         const id = currentId || 'ord_' + Date.now();
         const data = {
             client: document.getElementById('f-client').value || 'Bez nazwy',
+            phone: document.getElementById('f-phone').value || '',
+            addr: document.getElementById('f-addr').value || '',
+            date: document.getElementById('f-date').value || '',
+            notes: document.getElementById('f-notes').value || '',
             status: document.getElementById('f-status').value,
             kosztorys: parseFloat(document.getElementById('f-kosztorys').value || 0),
             received: parseFloat(document.getElementById('f-received').value || 0),
@@ -229,7 +223,7 @@
     };
 
     window.confirmDelete = async function() {
-        if(confirm('Czy na pewno chcesz trwale usunąć to zamówienie?')) {
+        if(confirm('Usunąć zamówienie trwale?')) {
             await deleteDoc(doc(db, 'zamowienia', currentId));
             goList();
         }
@@ -238,59 +232,47 @@
 
 <script>
     let currentId = null;
-
     function fmt(n) { return n.toLocaleString('pl-PL', { minimumFractionDigits: 2 }) + ' zł'; }
 
     function applySettings(cfg) {
-        if(cfg.name) {
-            document.getElementById('header-logo').innerHTML = `🪑 <span>${cfg.name}</span>`;
-            document.getElementById('s-name').value = cfg.name;
-        }
-        if(cfg.colorDk) {
-            document.documentElement.style.setProperty('--dk', cfg.colorDk);
-            document.getElementById('s-color-dk').value = cfg.colorDk;
-        }
-        if(cfg.colorAc) {
-            document.documentElement.style.setProperty('--lt', cfg.colorAc);
-            document.getElementById('s-color-ac').value = cfg.colorAc;
-        }
+        if(cfg.name) { document.getElementById('header-logo').innerHTML = `🪑 <span>${cfg.name}</span>`; document.getElementById('s-name').value = cfg.name; }
+        if(cfg.colorDk) { document.documentElement.style.setProperty('--dk', cfg.colorDk); document.getElementById('s-color-dk').value = cfg.colorDk; }
+        if(cfg.colorAc) { document.documentElement.style.setProperty('--lt', cfg.colorAc); document.getElementById('s-color-ac').value = cfg.colorAc; }
     }
 
     function renderList(q = '') {
         const tbody = document.getElementById('ordersTbody');
         const mdiv = document.getElementById('mobileCards');
         const filtered = (window._orders || []).filter(o => (o.client || '').toLowerCase().includes(q.toLowerCase()));
+        document.getElementById('lhdr-sub').textContent = filtered.length + ' zamówień';
 
-        document.getElementById('lhdr-sub').textContent = filtered.length + ' aktywnych zleceń';
-
-        tbody.innerHTML = filtered.map(o => {
-            const zysk = (o.received || 0) - (o.costs || 0);
-            return `<tr onclick="editOrder('${o.id}')">
+        tbody.innerHTML = filtered.map(o => `
+            <tr onclick="editOrder('${o.id}')">
                 <td><strong>${o.client}</strong></td>
                 <td><span class="badge s-${o.status}">${o.status}</span></td>
                 <td>${fmt(o.kosztorys || 0)}</td>
-                <td style="color:var(--g); font-weight:600">${fmt(zysk)}</td>
-            </tr>`;
-        }).join('');
+                <td style="color:var(--g); font-weight:600">${fmt((o.received||0)-(o.costs||0))}</td>
+            </tr>`).join('');
 
         mdiv.innerHTML = filtered.map(o => `
             <div class="mcard" onclick="editOrder('${o.id}')">
-                <div style="display:flex; justify-content:space-between; align-items:start">
-                    <strong>${o.client}</strong>
-                    <span class="badge s-${o.status}">${o.status}</span>
-                </div>
-                <div style="margin-top:12px; display:flex; justify-content:space-between; font-size:12px">
+                <div style="display:flex; justify-content:space-between"><strong>${o.client}</strong><span class="badge s-${o.status}">${o.status}</span></div>
+                <div style="margin-top:8px; font-size:12px; color:var(--mute)">${o.addr || ''}</div>
+                <div style="margin-top:10px; display:flex; justify-content:space-between">
                     <span>Zysk: <b style="color:var(--g)">${fmt((o.received||0)-(o.costs||0))}</b></span>
-                    <span style="color:var(--mute)">Wycena: ${fmt(o.kosztorys||0)}</span>
+                    <span>Do zapłaty: <b>${fmt(Math.max(0, (o.kosztorys||0)-(o.received||0)))}</b></span>
                 </div>
-            </div>
-        `).join('');
+            </div>`).join('');
     }
 
     function editOrder(id) {
         const o = window._orders.find(x => x.id === id);
         currentId = id;
         document.getElementById('f-client').value = o.client || '';
+        document.getElementById('f-phone').value = o.phone || '';
+        document.getElementById('f-addr').value = o.addr || '';
+        document.getElementById('f-date').value = o.date || '';
+        document.getElementById('f-notes').value = o.notes || '';
         document.getElementById('f-status').value = o.status || 'wycena';
         document.getElementById('f-kosztorys').value = o.kosztorys || 0;
         document.getElementById('f-received').value = o.received || 0;
@@ -303,6 +285,10 @@
     function newOrder() {
         currentId = null;
         document.getElementById('f-client').value = '';
+        document.getElementById('f-phone').value = '';
+        document.getElementById('f-addr').value = '';
+        document.getElementById('f-date').value = new Date().toISOString().split('T')[0];
+        document.getElementById('f-notes').value = '';
         document.getElementById('f-status').value = 'wycena';
         document.getElementById('f-kosztorys').value = '';
         document.getElementById('f-received').value = '';
@@ -326,9 +312,7 @@
         document.getElementById('fab-btn').style.display = (id === 'viewList') ? 'block' : 'none';
         window.scrollTo(0,0);
     }
-    
     function goList() { showView('viewList'); }
 </script>
-
 </body>
 </html>
