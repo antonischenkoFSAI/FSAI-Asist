@@ -694,13 +694,27 @@ window._fbDelete = async function(id) {
   } catch(e) { console.error(e); toast('Błąd usunięcia Firebase','err'); }
 };
 
-// Auto-init if config exists
+// ── HARDCODED CONFIG (auto-connects without manual setup) ──
+const HARDCODED_CFG = {
+  apiKey: "AIzaSyCfGFmA0QVEH3plNkYf-hNJMLmm2TKY27E",
+  authDomain: "fsai-asistent.firebaseapp.com",
+  projectId: "fsai-asistent",
+  appId: "1:423200820855:web:24560dfffddcfc322c8072",
+  storageBucket: "fsai-asistent.appspot.com",
+  messagingSenderId: "423200820855"
+};
+
+// Auto-init with hardcoded config (no manual setup needed)
+document.getElementById('cfgBanner').classList.add('hidden');
+document.getElementById('cfg-apiKey').value = HARDCODED_CFG.apiKey;
+document.getElementById('cfg-authDomain').value = HARDCODED_CFG.authDomain;
+document.getElementById('cfg-projectId').value = HARDCODED_CFG.projectId;
+document.getElementById('cfg-appId').value = HARDCODED_CFG.appId;
+initFirebase(HARDCODED_CFG);
+
+// Also check for saved config override
 const savedCfg = loadCfg();
-if (savedCfg) {
-  document.getElementById('cfg-apiKey').value = savedCfg.apiKey||'';
-  document.getElementById('cfg-authDomain').value = savedCfg.authDomain||'';
-  document.getElementById('cfg-projectId').value = savedCfg.projectId||'';
-  document.getElementById('cfg-appId').value = savedCfg.appId||'';
+if (savedCfg && savedCfg.projectId !== HARDCODED_CFG.projectId) {
   initFirebase(savedCfg);
 }
 </script>
