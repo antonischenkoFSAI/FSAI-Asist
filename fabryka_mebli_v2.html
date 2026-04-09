@@ -218,6 +218,99 @@ body{font-family:'DM Sans',sans-serif;background:var(--cr);color:var(--ink);min-
   .fg-2,.fg-3{grid-template-columns:1fr}
   .form-body{padding:10px}
 }
+
+/* ══ BOTTOM NAV ══ */
+.bnav{position:fixed;bottom:0;left:0;right:0;background:var(--dk);display:flex;z-index:150;box-shadow:0 -2px 16px rgba(0,0,0,.25);padding-bottom:env(safe-area-inset-bottom)}
+.bnav-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:9px 4px 6px;cursor:pointer;border:none;background:none;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;gap:2px;transition:var(--tr)}
+.bnav-btn.on{color:var(--lt)}.bnav-btn .bico{font-size:20px;line-height:1}
+/* ══ TODAY BLOCK ══ */
+.today-block{background:var(--wh);border-radius:var(--rad);box-shadow:var(--sh);margin:10px 14px 6px;overflow:hidden}
+.today-hdr{padding:10px 14px;background:linear-gradient(90deg,#1D4ED8,#3B82F6);display:flex;align-items:center;justify-content:space-between}
+.today-hdr h3{font-size:13px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px}
+.today-hdr small{font-size:11px;color:rgba(255,255,255,.7);cursor:pointer;text-decoration:underline}
+.today-empty{padding:12px 14px;color:var(--mute);font-size:13px;text-align:center}
+.today-task{display:flex;align-items:center;gap:9px;padding:8px 14px;border-top:1px solid #F0E8DC;transition:var(--tr)}
+.today-task:hover{background:var(--cr)}
+.today-task.done .tt-name{text-decoration:line-through;color:var(--mute)}
+.tt-check{width:20px;height:20px;border-radius:50%;border:2px solid #DDD0C0;display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;font-size:11px;transition:var(--tr)}
+.tt-check.done{background:var(--g);border-color:var(--g);color:#fff}
+.tt-name{font-size:13px;font-weight:500;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tt-meta{font-size:11px;color:var(--mute);white-space:nowrap}
+/* ══ TASKS VIEW ══ */
+.tasks-hdr{background:linear-gradient(135deg,#1D4ED8,#3B82F6);padding:18px 16px 14px;color:#fff}
+.tasks-hdr h1{font-family:'DM Serif Display',serif;font-size:22px;font-weight:400;margin-bottom:2px}
+.tasks-hdr p{font-size:11px;color:rgba(255,255,255,.7)}
+.tasks-toolbar{padding:9px 14px;background:#EEF2FF;border-bottom:1px solid #C7D2FE;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.view-toggle{display:flex;background:#fff;border-radius:var(--rads);overflow:hidden;border:1.5px solid #C7D2FE}
+.vt-btn{padding:6px 13px;font-size:12px;font-weight:600;cursor:pointer;border:none;background:none;font-family:'DM Sans',sans-serif;color:#1D4ED8;transition:var(--tr)}
+.vt-btn.on{background:#1D4ED8;color:#fff}
+.cal-wrap{padding:10px 14px 80px}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.cal-nav h2{font-family:'DM Serif Display',serif;font-size:17px}
+.cal-nav-btn{background:#fff;border:1.5px solid #E0D4C8;border-radius:var(--rads);padding:5px 11px;cursor:pointer;font-size:13px;transition:var(--tr)}
+.cal-nav-btn:hover{border-color:#1D4ED8}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:6px}
+.cal-dow{text-align:center;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);padding:3px 0}
+.cal-day{background:#fff;border-radius:var(--rads);min-height:64px;padding:4px;cursor:pointer;border:1.5px solid transparent;transition:var(--tr)}
+.cal-day:hover{border-color:#1D4ED8;background:#F8FBFF}
+.cal-day.today{border-color:#1D4ED8;background:#EEF2FF}
+.cal-day.other-month{opacity:.35}
+.cal-day.selected{border-color:#1D4ED8;box-shadow:0 0 0 2px rgba(29,78,216,.2)}
+.cal-day-nr{font-size:11px;font-weight:700;color:var(--soft);margin-bottom:2px}
+.cal-day.today .cal-day-nr{color:#1D4ED8}
+.cal-dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin:1px}
+.cal-dot.pending{background:#1D4ED8}.cal-dot.done{background:var(--g)}.cal-dot.overdue{background:var(--r)}
+.cal-day-tasks{font-size:10px;line-height:1.3}
+.cal-mini-task{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-radius:2px;padding:1px 3px;margin-bottom:1px;font-weight:500}
+.cal-mini-task.pending{background:#EEF2FF;color:#1D4ED8}
+.cal-mini-task.done{background:var(--gb);color:var(--g);text-decoration:line-through;opacity:.6}
+.cal-mini-task.overdue{background:var(--rb);color:var(--r)}
+.week-wrap{padding:8px 14px 80px}
+.week-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.week-nav h2{font-family:'DM Serif Display',serif;font-size:16px}
+.week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.week-day{background:#fff;border-radius:var(--rads);padding:7px;min-height:100px;border:1.5px solid transparent;cursor:pointer;transition:var(--tr)}
+.week-day:hover{border-color:#1D4ED8}
+.week-day.today{border-color:#1D4ED8;background:#EEF2FF}
+.week-day-hdr{text-align:center;margin-bottom:5px;padding-bottom:4px;border-bottom:1px solid #F0E8DC}
+.week-dow{font-size:9px;font-weight:700;text-transform:uppercase;color:var(--mute)}
+.week-nr{font-size:15px;font-weight:700;color:var(--soft)}
+.week-day.today .week-nr{color:#1D4ED8}
+.week-task{font-size:10px;padding:2px 4px;border-radius:3px;margin-bottom:2px;cursor:pointer;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.week-task.pending{background:#EEF2FF;color:#1D4ED8}
+.week-task.done{background:var(--gb);color:var(--g);text-decoration:line-through;opacity:.6}
+.week-task.overdue{background:var(--rb);color:var(--r)}
+.task-list-wrap{padding:10px 14px 80px}
+.task-group{margin-bottom:14px}
+.task-group-hdr{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--mute);padding:5px 0;border-bottom:1.5px solid #EDE4DA;margin-bottom:7px}
+.task-item{background:#fff;border-radius:var(--rads);box-shadow:var(--sh);padding:10px 12px;display:flex;align-items:center;gap:9px;margin-bottom:6px;cursor:pointer;transition:var(--tr)}
+.task-item:hover{background:var(--pl)}
+.task-item.done{opacity:.6}
+.task-check{width:22px;height:22px;border-radius:50%;border:2px solid #DDD0C0;display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;font-size:12px;transition:var(--tr)}
+.task-check.done{background:var(--g);border-color:var(--g);color:#fff}
+.task-check.overdue{border-color:var(--r)}
+.task-info{flex:1;min-width:0}
+.task-name{font-size:13px;font-weight:600}
+.task-item.done .task-name{text-decoration:line-through;color:var(--mute)}
+.task-meta{font-size:11px;color:var(--mute);margin-top:2px;display:flex;gap:7px;flex-wrap:wrap}
+.tmc{color:#1D4ED8;font-weight:500}.tma{color:var(--p);font-weight:500}.tmt{color:var(--o)}.tmd{color:var(--r);font-weight:600}
+.task-modal-bg{display:none;position:fixed;inset:0;background:rgba(30,18,8,.55);z-index:400;align-items:flex-end;justify-content:center}
+.task-modal-bg.on{display:flex}
+.task-modal{background:#fff;border-radius:var(--rad) var(--rad) 0 0;padding:18px 16px 32px;width:100%;max-width:520px;max-height:92vh;overflow-y:auto}
+.task-modal h3{font-family:'DM Serif Display',serif;font-size:18px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between}
+.tm-close{background:none;border:none;font-size:18px;cursor:pointer;color:var(--mute);padding:2px}
+.tm-fld{margin-bottom:11px}
+.tm-fld label{display:block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-bottom:4px}
+.tm-fld input,.tm-fld select,.tm-fld textarea{width:100%;border:1.5px solid #E0D4C8;border-radius:var(--rads);padding:9px 11px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);background:var(--cr);outline:none;transition:var(--tr);-webkit-appearance:none}
+.tm-fld input:focus,.tm-fld select:focus{border-color:#1D4ED8;background:#fff}
+.tm-fld select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 12 12'%3E%3Cpath fill='%239A8A7A' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-color:var(--cr);padding-right:26px}
+.tm-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tm-btns{display:flex;gap:8px;margin-top:14px}
+.tm-btn-save{flex:2;background:#1D4ED8;color:#fff;border:none;border-radius:var(--rads);padding:12px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer}
+.tm-btn-del{background:var(--rb);color:var(--r);border:1px solid var(--r);border-radius:var(--rads);padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;display:none}
+.tm-btn-del.on{display:block}
+.tm-btn-cancel{background:var(--grb);color:var(--gr);border:none;border-radius:var(--rads);padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer}
+@media(max-width:480px){.week-grid{grid-template-columns:repeat(4,1fr)}}
 </style>
 </head>
 <body>
@@ -269,7 +362,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--cr);color:var(--ink);min-
       </div>
       <button class="btn btn-pri" onclick="newOrder()">＋ Nowy klient</button>
     </div>
-    <div class="ftabs" id="ftabs"></div>
+    <div id="todayBlock"></div>
+  <div class="ftabs" id="ftabs"></div>
     <div class="twrap">
       <div class="tbl-scroll">
         <table class="tbl">
@@ -479,6 +573,51 @@ body{font-family:'DM Sans',sans-serif;background:var(--cr);color:var(--ink);min-
 
     </div>
   </div>
+
+  <!-- BOTTOM NAV -->
+  <div class="bnav" id="bnav">
+    <button class="bnav-btn on" id="bnav-orders" onclick="switchTab('orders')"><span class="bico">📋</span><span>Zamówienia</span></button>
+    <button class="bnav-btn" id="bnav-tasks" onclick="switchTab('tasks')"><span class="bico">✅</span><span>Zadania</span></button>
+  </div>
+
+  <!-- TASKS VIEW -->
+  <div class="view" id="viewTasks">
+    <div class="tasks-hdr">
+      <h1>Zadania</h1>
+      <p id="tasks-sub">Ładowanie…</p>
+    </div>
+    <div class="tasks-toolbar">
+      <div class="view-toggle">
+        <button class="vt-btn on" id="vt-week" onclick="setTaskView('week')">Tydzień</button>
+        <button class="vt-btn" id="vt-month" onclick="setTaskView('month')">Miesiąc</button>
+        <button class="vt-btn" id="vt-list" onclick="setTaskView('list')">Lista</button>
+      </div>
+      <button class="btn btn-pri" style="background:#1D4ED8;padding:7px 14px;font-size:12px" onclick="openTaskModal()">＋ Zadanie</button>
+    </div>
+    <!-- Week view -->
+    <div id="weekView" class="week-wrap">
+      <div class="week-nav">
+        <button class="cal-nav-btn" onclick="weekOffset(-1)">‹</button>
+        <h2 id="week-label"></h2>
+        <button class="cal-nav-btn" onclick="weekOffset(1)">›</button>
+      </div>
+      <div class="week-grid" id="weekGrid"></div>
+    </div>
+    <!-- Month view -->
+    <div id="monthView" class="cal-wrap" style="display:none">
+      <div class="cal-nav">
+        <button class="cal-nav-btn" onclick="monthOffset(-1)">‹</button>
+        <h2 id="month-label"></h2>
+        <button class="cal-nav-btn" onclick="monthOffset(1)">›</button>
+      </div>
+      <div class="cal-grid" id="calDows"></div>
+      <div class="cal-grid" id="calGrid"></div>
+    </div>
+    <!-- List view -->
+    <div id="listView" class="task-list-wrap" style="display:none">
+      <div id="taskListContent"></div>
+    </div>
+  </div>
 </div><!-- /app-wrap -->
 
 <!-- DELETE MODAL -->
@@ -513,6 +652,32 @@ body{font-family:'DM Sans',sans-serif;background:var(--cr);color:var(--ink);min-
   </div>
 </div>
 
+<!-- TASK MODAL -->
+<div class="task-modal-bg" id="taskModal">
+  <div class="task-modal">
+    <h3>
+      <span id="tm-title">Nowe zadanie</span>
+      <button class="tm-close" onclick="closeTaskModal()">✕</button>
+    </h3>
+    <div class="tm-fld"><label>Nazwa zadania *</label><input id="tm-name" placeholder="np. Pomiar u klienta"></div>
+    <div class="tm-row">
+      <div class="tm-fld"><label>Data</label><input id="tm-date" type="date"></div>
+      <div class="tm-fld"><label>Godzina</label><input id="tm-time" type="time" value="09:00"></div>
+    </div>
+    <div class="tm-fld"><label>Klient (opcjonalnie)</label>
+      <select id="tm-client"><option value="">— bez klienta —</option></select>
+    </div>
+    <div class="tm-fld"><label>Przypisz do</label>
+      <select id="tm-assign"><option value="">— wszyscy —</option></select>
+    </div>
+    <div class="tm-fld"><label>Notatka</label><input id="tm-note" placeholder="Dodatkowe informacje…"></div>
+    <div class="tm-btns">
+      <button class="tm-btn-cancel" onclick="closeTaskModal()">Anuluj</button>
+      <button class="tm-btn-del on" id="tm-del-btn" onclick="deleteTask()" style="display:none">🗑 Usuń</button>
+      <button class="tm-btn-save" onclick="saveTask()">✓ Zapisz</button>
+    </div>
+  </div>
+</div>
 <!-- FAB -->
 <button class="fab" onclick="newOrder()">＋ Nowy klient</button>
 
@@ -625,6 +790,42 @@ window._fbDelete = async function(id){
   try{ await deleteDoc(doc(db,COLL,id)); }
   catch(e){ setSync('off'); toast('Błąd usunięcia','err'); }
 };
+
+
+// ── TASKS FIRESTORE ──
+const TCOLL2 = 'zadania';
+const UCOLL2 = 'users_meta';
+
+window._fbSaveTask = async function(task){
+  try{ await setDoc(doc(db,TCOLL2,task.id),task); }catch(e){ toast('Błąd zapisu zadania','err'); }
+};
+window._fbDeleteTask = async function(id){
+  try{ await deleteDoc(doc(db,TCOLL2,id)); }catch(e){ toast('Błąd usunięcia','err'); }
+};
+
+// Listen to tasks
+onSnapshot(collection(db,TCOLL2), snap=>{
+  window._tasks = snap.docs.map(d=>({id:d.id,...d.data()}));
+  window._tasks.sort((a,b)=>(a.date||'').localeCompare(b.date||'')||(a.time||'').localeCompare(b.time||''));
+  if(document.getElementById('viewTasks')?.classList.contains('on')) renderTasksView();
+  renderTodayBlock();
+}, ()=>{});
+
+// Save current user meta (name for assignment)
+onAuthStateChanged(auth, async user=>{
+  if(user){
+    // Save user to meta collection so others can assign tasks
+    await setDoc(doc(db,UCOLL2,user.uid),{
+      uid:user.uid, email:user.email,
+      name:user.displayName||user.email.split('@')[0],
+      lastSeen:new Date().toISOString()
+    },{merge:true});
+    // Listen to all users
+    onSnapshot(collection(db,UCOLL2), snap=>{
+      window._users = snap.docs.map(d=>d.data());
+    },()=>{});
+  }
+});
 
 // Show login on start
 document.getElementById('loginWrap').classList.add('on');
@@ -1059,6 +1260,263 @@ function importData(evt){
     evt.target.value='';
   };
   reader.readAsText(file);
+}
+
+
+// ══════════════════════════════════════════════
+//  TASKS MODULE
+// ══════════════════════════════════════════════
+window._tasks = [];
+window._users = [];
+let currentTaskId = null;
+let taskView = 'week';
+let weekDelta = 0;
+let monthDelta = 0;
+const TCOLL = 'zadania';
+const UCOLL = 'users_meta';
+
+// Tab switching
+function switchTab(tab){
+  document.getElementById('bnav-orders').classList.toggle('on', tab==='orders');
+  document.getElementById('bnav-tasks').classList.toggle('on', tab==='tasks');
+  document.getElementById('viewList').classList.toggle('on', tab==='orders');
+  document.getElementById('viewTasks').classList.toggle('on', tab==='tasks');
+  document.getElementById('viewForm').classList.remove('on');
+  if(tab==='tasks') renderTasksView();
+  else renderList();
+  // hide fab on tasks tab
+  document.querySelector('.fab').style.display = tab==='tasks' ? 'none' : '';
+}
+
+// Start tasks listener
+function startTasksListening(){
+  if(!window._fbTaskUnsub) window._fbTaskUnsub = null;
+  // will be set from firebase module
+}
+
+function setTaskView(v){
+  taskView=v;
+  ['week','month','list'].forEach(x=>{
+    document.getElementById('vt-'+x).classList.toggle('on',x===v);
+    document.getElementById(x+'View').style.display=x===v?'':'none';
+  });
+  renderTasksView();
+}
+
+function renderTasksView(){
+  checkOverdueTasks();
+  renderTodayBlock();
+  if(taskView==='week') renderWeek();
+  else if(taskView==='month') renderMonth();
+  else renderTaskList();
+  document.getElementById('tasks-sub').textContent = (window._tasks||[]).length + ' zadań';
+}
+
+// Auto-transfer overdue tasks to today at midnight
+function checkOverdueTasks(){
+  const todayStr = today();
+  const now = new Date();
+  (window._tasks||[]).forEach(t=>{
+    if(!t.done && t.date && t.date < todayStr){
+      // Transfer to today
+      const updated = {...t, date: todayStr, transferredFrom: t.date};
+      if(window._fbSaveTask) window._fbSaveTask(updated);
+    }
+  });
+}
+
+// ── TODAY BLOCK ──
+function renderTodayBlock(){
+  const todayStr = today();
+  const todayFmt = new Date().toLocaleDateString('pl-PL',{weekday:'long',day:'numeric',month:'long'});
+  const todayTasks = (window._tasks||[]).filter(t=>t.date===todayStr).sort((a,b)=>(a.time||'').localeCompare(b.time||''));
+  const block = document.getElementById('todayBlock');
+  if(!block) return;
+  if(!todayTasks.length){
+    block.innerHTML=`<div class="today-block"><div class="today-hdr"><h3>📅 Dzisiaj</h3><small onclick="switchTab('tasks')">${todayFmt}</small></div><div class="today-empty">Brak zadań na dziś 🎉</div></div>`;
+    return;
+  }
+  const items = todayTasks.map(t=>`
+    <div class="today-task ${t.done?'done':''}" onclick="openTaskModal('${t.id}')">
+      <div class="tt-check ${t.done?'done':''}" onclick="event.stopPropagation();toggleTask('${t.id}')">${t.done?'✓':''}</div>
+      <div style="flex:1;min-width:0">
+        <div class="tt-name">${t.name||'—'}</div>
+        ${t.clientId?`<div class="tt-meta" style="color:var(--b);font-size:11px">${getClientName(t.clientId)}</div>`:''}
+      </div>
+      <div class="tt-meta">${t.time||''}</div>
+    </div>`).join('');
+  block.innerHTML=`<div class="today-block"><div class="today-hdr"><h3>📅 Dzisiaj <span style="background:rgba(255,255,255,.2);border-radius:10px;padding:1px 7px;font-size:11px">${todayTasks.length}</span></h3><small onclick="switchTab('tasks')">${todayFmt}</small></div>${items}</div>`;
+}
+
+// ── WEEK VIEW ──
+function weekOffset(d){ weekDelta+=d; renderWeek(); }
+function renderWeek(){
+  const now = new Date();
+  now.setDate(now.getDate() + weekDelta*7);
+  const dow = now.getDay(); // 0=sun
+  const monday = new Date(now); monday.setDate(now.getDate() - (dow===0?6:dow-1));
+  const days=[];
+  for(let i=0;i<7;i++){ const d=new Date(monday); d.setDate(monday.getDate()+i); days.push(d); }
+  const todayStr=today();
+  document.getElementById('week-label').textContent=
+    days[0].toLocaleDateString('pl-PL',{day:'numeric',month:'short'})+' — '+days[6].toLocaleDateString('pl-PL',{day:'numeric',month:'short',year:'numeric'});
+  const DOWS=['Pon','Wt','Śr','Czw','Pt','Sob','Nd'];
+  document.getElementById('weekGrid').innerHTML=days.map((d,i)=>{
+    const ds=d.toISOString().slice(0,10);
+    const dt=d.toLocaleDateString('pl-PL',{weekday:'short'});
+    const isToday=ds===todayStr;
+    const dayTasks=(window._tasks||[]).filter(t=>t.date===ds).sort((a,b)=>(a.time||'').localeCompare(b.time||''));
+    const taskHtml=dayTasks.map(t=>{
+      const cls=t.done?'done':ds<todayStr?'overdue':'pending';
+      return `<div class="week-task ${cls}" onclick="event.stopPropagation();openTaskModal('${t.id}')">${t.time?t.time+' ':''} ${t.name||'—'}</div>`;
+    }).join('');
+    return `<div class="week-day ${isToday?'today':''}" onclick="openTaskModal(null,'${ds}')">
+      <div class="week-day-hdr"><div class="week-dow">${DOWS[i]}</div><div class="week-nr">${d.getDate()}</div></div>
+      ${taskHtml}</div>`;
+  }).join('');
+}
+
+// ── MONTH VIEW ──
+function monthOffset(d){ monthDelta+=d; renderMonth(); }
+function renderMonth(){
+  const now=new Date(); now.setMonth(now.getMonth()+monthDelta); now.setDate(1);
+  const year=now.getFullYear(), month=now.getMonth();
+  document.getElementById('month-label').textContent=now.toLocaleDateString('pl-PL',{month:'long',year:'numeric'});
+  const todayStr=today();
+  const DOWS=['Pon','Wt','Śr','Czw','Pt','Sob','Nd'];
+  document.getElementById('calDows').innerHTML=DOWS.map(d=>`<div class="cal-dow">${d}</div>`).join('');
+  // First day of month
+  const firstDow=(new Date(year,month,1).getDay()||7)-1; // 0=Mon
+  const daysInMonth=new Date(year,month+1,0).getDate();
+  const cells=[];
+  for(let i=0;i<firstDow;i++){
+    const d=new Date(year,month,1-firstDow+i);
+    cells.push({date:d,other:true});
+  }
+  for(let i=1;i<=daysInMonth;i++) cells.push({date:new Date(year,month,i),other:false});
+  while(cells.length%7!==0){
+    const d=new Date(year,month+1,cells.length-firstDow-daysInMonth+1);
+    cells.push({date:d,other:true});
+  }
+  document.getElementById('calGrid').innerHTML=cells.map(c=>{
+    const ds=c.date.toISOString().slice(0,10);
+    const isToday=ds===todayStr;
+    const dayTasks=(window._tasks||[]).filter(t=>t.date===ds);
+    const mini=dayTasks.slice(0,2).map(t=>{
+      const cls=t.done?'done':ds<todayStr?'overdue':'pending';
+      return `<div class="cal-mini-task ${cls}">${t.name||'—'}</div>`;
+    }).join('')+(dayTasks.length>2?`<div style="font-size:9px;color:var(--mute)">+${dayTasks.length-2} więcej</div>`:'');
+    return `<div class="cal-day ${isToday?'today':''} ${c.other?'other-month':''}" onclick="openTaskModal(null,'${ds}')">
+      <div class="cal-day-nr">${c.date.getDate()}</div>
+      <div class="cal-day-tasks">${mini}</div></div>`;
+  }).join('');
+}
+
+// ── LIST VIEW ──
+function renderTaskList(){
+  const tasks=window._tasks||[];
+  const todayStr=today();
+  const tomorrow=new Date(); tomorrow.setDate(tomorrow.getDate()+1);
+  const tomorrowStr=tomorrow.toISOString().slice(0,10);
+  const groups=[
+    {key:'overdue', label:'⚠️ Przeterminowane', items:tasks.filter(t=>!t.done&&t.date&&t.date<todayStr)},
+    {key:'today',   label:'📅 Dziś',            items:tasks.filter(t=>t.date===todayStr)},
+    {key:'tomorrow',label:'➡️ Jutro',           items:tasks.filter(t=>t.date===tomorrowStr)},
+    {key:'week',    label:'📆 Ten tydzień',      items:tasks.filter(t=>t.date>tomorrowStr&&t.date<=getWeekEnd())},
+    {key:'later',   label:'🗓 Później',          items:tasks.filter(t=>t.date>getWeekEnd())},
+    {key:'noddate', label:'📌 Bez daty',         items:tasks.filter(t=>!t.date)},
+  ];
+  document.getElementById('taskListContent').innerHTML=groups.filter(g=>g.items.length).map(g=>`
+    <div class="task-group">
+      <div class="task-group-hdr">${g.label} <span style="opacity:.5">(${g.items.length})</span></div>
+      ${g.items.map(t=>taskItemHtml(t,todayStr)).join('')}
+    </div>`).join('') || '<div style="padding:40px;text-align:center;color:var(--mute)">Brak zadań 🎉</div>';
+}
+
+function getWeekEnd(){
+  const d=new Date(); d.setDate(d.getDate()+(7-(d.getDay()||7)));
+  return d.toISOString().slice(0,10);
+}
+
+function taskItemHtml(t,todayStr){
+  const isOverdue=!t.done&&t.date&&t.date<todayStr;
+  return `<div class="task-item ${t.done?'done':''}" onclick="openTaskModal('${t.id}')">
+    <div class="task-check ${t.done?'done':isOverdue?'overdue':''}" onclick="event.stopPropagation();toggleTask('${t.id}')">${t.done?'✓':isOverdue?'!':''}</div>
+    <div class="task-info">
+      <div class="task-name">${t.name||'—'}</div>
+      <div class="task-meta">
+        ${t.date?`<span class="${isOverdue?'tmd':''}">${t.date}${t.time?' '+t.time:''}</span>`:''}
+        ${t.clientId?`<span class="tmc">👤 ${getClientName(t.clientId)}</span>`:''}
+        ${t.assignTo?`<span class="tma">→ ${t.assignTo}</span>`:''}
+        ${t.note?`<span>${t.note}</span>`:''}
+      </div>
+    </div>
+  </div>`;
+}
+
+function getClientName(id){
+  const o=getOrder(id); return o?o.client||o.nr||id:id;
+}
+
+// ── TASK MODAL ──
+function openTaskModal(id=null, dateStr=''){
+  currentTaskId=id;
+  const t=id?(window._tasks||[]).find(x=>x.id===id):null;
+  document.getElementById('tm-title').textContent=id?'Edytuj zadanie':'Nowe zadanie';
+  document.getElementById('tm-name').value=t?.name||'';
+  document.getElementById('tm-date').value=t?.date||dateStr||today();
+  document.getElementById('tm-time').value=t?.time||'09:00';
+  document.getElementById('tm-note').value=t?.note||'';
+  // Populate client select
+  const cSel=document.getElementById('tm-client');
+  cSel.innerHTML='<option value="">— bez klienta —</option>'+
+    (getOrders()||[]).map(o=>`<option value="${o.id}" ${t?.clientId===o.id?'selected':''}>${o.nr||''} ${o.client||''}</option>`).join('');
+  cSel.value=t?.clientId||'';
+  // Populate assign select
+  const aSel=document.getElementById('tm-assign');
+  aSel.innerHTML='<option value="">— wszyscy —</option>'+
+    (window._users||[]).map(u=>`<option value="${u.name||u.email}" ${t?.assignTo===(u.name||u.email)?'selected':''}>${u.name||u.email}</option>`).join('');
+  aSel.value=t?.assignTo||'';
+  const delBtn=document.getElementById('tm-del-btn');
+  delBtn.style.display=id?'block':'none';
+  document.getElementById('taskModal').classList.add('on');
+  setTimeout(()=>document.getElementById('tm-name').focus(),100);
+}
+
+function closeTaskModal(){ document.getElementById('taskModal').classList.remove('on'); }
+
+function saveTask(){
+  const name=document.getElementById('tm-name').value.trim();
+  if(!name){ toast('Wpisz nazwę zadania','err'); return; }
+  const task={
+    id: currentTaskId||('task_'+Date.now()),
+    name,
+    date: document.getElementById('tm-date').value,
+    time: document.getElementById('tm-time').value,
+    clientId: document.getElementById('tm-client').value,
+    assignTo: document.getElementById('tm-assign').value,
+    note: document.getElementById('tm-note').value,
+    done: currentTaskId ? ((window._tasks||[]).find(t=>t.id===currentTaskId)?.done||false) : false,
+    createdAt: currentTaskId ? ((window._tasks||[]).find(t=>t.id===currentTaskId)?.createdAt||new Date().toISOString()) : new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  };
+  if(window._fbSaveTask) window._fbSaveTask(task);
+  closeTaskModal();
+  toast(currentTaskId?'Zadanie zaktualizowane ✓':'Zadanie dodane ✓');
+}
+
+function deleteTask(){
+  if(!currentTaskId) return;
+  if(window._fbDeleteTask) window._fbDeleteTask(currentTaskId);
+  closeTaskModal();
+  toast('Zadanie usunięte');
+}
+
+function toggleTask(id){
+  const t=(window._tasks||[]).find(x=>x.id===id);
+  if(!t) return;
+  const updated={...t, done:!t.done, updatedAt:new Date().toISOString()};
+  if(window._fbSaveTask) window._fbSaveTask(updated);
 }
 
 // ══ INIT ══
